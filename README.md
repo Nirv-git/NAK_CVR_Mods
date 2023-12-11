@@ -1,65 +1,21 @@
-## NotAKids ChilloutVR Mods
+# Blackout
 
-# Update Notice: ChilloutVR r171
+Dims your screen after set time of sitting still. Intended for VR sleeping.    
 
-Not all mods have been updated for r171. You can see what has been updated below:
+The three states are Awake > Drowsy > Sleep. Drowsy and Sleep both have customizable visual options (HDR Clamp, Hue, Desaturation, Brightness) and the mod can lower your master volume when sleeping.   
 
----
+There are customizable thresholds for entering and exiting from Drowsy and Sleep, these are based off of your head movement velocity (Normalized on your avatar size). Along with this the mod can watch your player movement, joystick activity, to move to a more wakeful state.    
 
-| Mod Name                                                                                                   | Approval State | Released in this repo | CVRMG Category          |
-|------------------------------------------------------------------------------------------------------------|----------------|-----------------------|-------------------------|
-| [AASBufferFix](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/AASBufferFix)                      | Retired        | Yes                   | Utilities & Tweaks      |
-| [AvatarScaleMod](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/AvatarScale)                     | N/A            | No                    | N/A                     |
-| [BadAnimatorFix](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/BadAnimatorFix)                  | Approved       | Yes                   | Fixes                   |
-| [Blackout](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/Blackout)                              | Approved       | No                    | New Features & Overhauls|
-| [ControllerFreeze](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/ControllerFreeze)              | N/A            | No                    | N/A                     |
-| [CVRGizmos](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/CVRGizmos)                            | Approved       | Yes                   | Very Niche              |
-| [ClearHudNotifications](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/ClearHudNotifications)    | Retired        | No                    | UI                      |
-| [DesktopVRIK](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/DesktopVRIK)                        | Approved       | Yes                   | Utilities & Tweaks      |
-| [DesktopVRSwitch](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/DesktopVRSwitch)                | Retired        | Yes                   | New Features & Overhauls|
-| [FuckCohtmlResourceHandler](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/FuckCohtmlResourceHandler) | N/A       | No                    | N/A                     |
-| [FuckMetrics](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/FuckMetrics)                        | Retired        | No                    | Performance & Fidelity  |
-| [FuckMLA](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/FuckMLA)                                | Approved       | Yes                   | Utilities & Tweaks      |
-| [FuckToes](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/FuckToes)                              | Approved       | Yes                   | Utilities & Tweaks      |
-| [GestureLock](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/GestureLock)                        | Approved       | Yes                   | Utilities & Tweaks      |
-| [HeadBobbingFix](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/HeadBobbingFix)                  | Retired        | Yes                   | Fixes                   |
-| [IKFixes](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/IKFixes)                                | Retired        | Yes                   | Fixes                   |
-| [JumpPatch](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/JumpPatch)                            | Retired        | Yes                   | Utilities & Tweaks      |
-| [MenuScalePatch](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/MenuScalePatch)                  | Retired        | Yes                   | Utilities & Tweaks      |
-| [NAK.CustomComponents](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/NAK.CustomComponents)      | N/A            | No                    | N/A                     |
-| [Nevermind](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/Nevermind)                            | N/A            | No                    | N/A                     |
-| [PathCamDisabler](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/PathCamDisabler)                | Approved       | Yes                   | Very Niche              |
-| [PickupPushPull](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/PickupPushPull)                  | Retired        | No                    | Utilities & Tweaks      |
-| [PortableCameraAdditions](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/PortableCameraAdditions)| Approved       | Yes                   | Camera                  |
-| [PropUndoButton](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/PropUndo)                        | Outdated       | No                    | Utilities & Tweaks      |
-| [SmoothRay](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/SmoothRay)                            | Approved       | Yes                   | Utilities & Tweaks      |
-| [ThirdPerson](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/ThirdPerson)                        | Approved       | Yes                   | New Features & Overhauls|
-| [TrackedControllerFix](https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/TrackedControllerFix)      | Approved       | Yes                   | Fixes                   |
+The mod can watch your controller movement and menu activity to prevent transitioning to a sleepier state.    
 
-### Note: This is a newly created central repository for my ChilloutVR mods. As I update and improve them, I will migrate releases to this repository and include them in each new release, following the approach used by SDraw and Kafejao.
+Head Movement Vision will temporary brighten your view based on your head moving.   
 
-To ensure a seamless transition, I will archive the standalone repositories once the approved version of the mod in CVRMG directs users to this repository in its mod info. This way, you can conveniently access all the latest updates and improvements from one central location.
+There are a couple 'debounce' options to prevent an accidental transition from sleeping to awake. 'Delay between Wakeup' makes it so a transition from Sleep>Drowsy and then from Drowsy>Awake must have a certain delay between them. 'Activity Debounce'  means that you must have two valid inputs within a time window before it will move you up a wakeful state.    
 
-This should also promote greater consistency across my mods, though results may vary.
+Integration with avatar Parameters (BlackoutModDrowsy & BlackoutModSleep) which get set True if in the respective states.     
 
-# How To Install
-
-The majority of modifications found in this repository are reviewed and made available through the [ChilloutVR Modding Group](https://discord.gg/dndGPM3bxu). 
-
-To access the approved versions, you can either navigate to the `#mod-releases` channel in the ChilloutVR Modding Group Discord or utilize the [ChilloutVR Melon Assistant](https://github.com/knah/CVRMelonAssistant) to install them automatically.
-
-If preferred, you may also download the most recent version directly from the **Releases** section. However, please keep in mind that not all of my mod binaries are presently hosted on this repository and may only be found on their separate repositories. 
-
-It is important to exercise caution when using anything outside of the ChilloutVR Modding Group releases, as it may not have undergone review and could be harmful or non-functional.
-
----
-
-Here is the block of text where I tell you this mod is not affiliated or endorsed by ABI.
-
-https://documentation.abinteractive.net/official/legal/tos/#7-modding-our-games
-
-> This mod is an independent creation and is not affiliated with, supported by or approved by Alpha Blend Interactive. 
-
-> Use of this mod is done so at the user's own risk and the creator cannot be held responsible for any issues arising from its use.
-
-> To the best of my knowledge, I have adhered to the Modding Guidelines established by Alpha Blend Interactive.
+ **Supports: [UI Expansion Kit](https://api.cvrmg.com/v1/mods/download/90)**    
+ **Supports: [BTKUILib](https://api.cvrmg.com/v1/mods/download/113)***   
+    
+![image](https://github.com/Nirv-git/CVRMods-Nirv/assets/81605232/88a9623d-5dea-471c-91df-a79a24a84517)
+   
