@@ -15,7 +15,7 @@ There are a couple 'debounce' options to prevent an accidental transition from s
 Integration with avatar Parameters (BlackoutModDrowsy & BlackoutModSleep) which get set True if in the respective states.     
 
  **Supports: [UI Expansion Kit](https://api.cvrmg.com/v1/mods/download/90)**    
- **Supports: [BTKUILib](https://api.cvrmg.com/v1/mods/download/113)***   
+ **Supports: [BTKUILib](https://api.cvrmg.com/v1/mods/download/113)**   
     
 ![image](https://github.com/Nirv-git/CVRMods-Nirv/assets/81605232/88a9623d-5dea-471c-91df-a79a24a84517)
    
