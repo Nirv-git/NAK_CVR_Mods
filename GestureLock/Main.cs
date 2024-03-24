@@ -1,24 +1,28 @@
 ﻿using MelonLoader;
+using HarmonyLib;
+using System;
 
-namespace NAK.GestureLock;
-
-public class GestureLock : MelonMod
+namespace NAK.GestureLock
 {
-    public override void OnInitializeMelon()
-    {
-        ApplyPatches(typeof(HarmonyPatches.CVRInputModule_XRPatches));
-    }
 
-    private void ApplyPatches(Type type)
+    public class GestureLock : MelonMod
     {
-        try
+        public override void OnInitializeMelon()
         {
-            HarmonyInstance.PatchAll(type);
+            ApplyPatches(typeof(CVRInputModule_XRPatches));
         }
-        catch (Exception e)
+
+        private void ApplyPatches(Type type)
         {
-            LoggerInstance.Msg($"Failed while patching {type.Name}!");
-            LoggerInstance.Error(e);
+            try
+            {
+                HarmonyInstance.PatchAll(type);
+            }
+            catch (Exception e)
+            {
+                LoggerInstance.Msg($"Failed while patching {type.Name}!");
+                LoggerInstance.Error(e);
+            }
         }
     }
 }

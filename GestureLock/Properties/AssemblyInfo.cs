@@ -24,9 +24,11 @@ using System.Reflection;
 [assembly: MelonAuthorColor(255, 158, 21, 32)]
 [assembly: HarmonyDontPatchAll]
 
-namespace NAK.GestureLock.Properties;
-internal static class AssemblyInfoParams
+namespace NAK.GestureLock.Properties
 {
-    public const string Version = "2.0.1";
-    public const string Author = "NotAKidoS";
+    internal static class AssemblyInfoParams
+    {
+        public const string Version = "2.0.2";
+        public const string Author = "Nirvash, NotAKidoS";
+    }
 }
