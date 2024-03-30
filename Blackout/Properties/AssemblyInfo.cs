@@ -26,6 +26,6 @@ using System.Reflection;
 namespace NAK.Blackout.Properties;
 internal static class AssemblyInfoParams
 {
-    public const string Version = "2.1.2";
+    public const string Version = "2.1.3";
     public const string Author = "Nirvash, NotAKidoS";
 }
