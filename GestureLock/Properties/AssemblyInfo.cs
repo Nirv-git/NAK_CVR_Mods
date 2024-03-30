@@ -28,7 +28,7 @@ namespace NAK.GestureLock.Properties
 {
     internal static class AssemblyInfoParams
     {
-        public const string Version = "2.0.2";
+        public const string Version = "2.0.3";
         public const string Author = "Nirvash, NotAKidoS";
     }
 }
