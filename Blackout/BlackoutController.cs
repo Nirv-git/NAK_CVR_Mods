@@ -558,7 +558,7 @@ public class BlackoutController : MonoBehaviour
     private void SetParam(string name, float value)
     {
         MelonLogger.Msg($"Setting {name} to {value}");
-        PlayerSetup.Instance.animatorManager.SetAnimatorParameter(name, value);
+        PlayerSetup.Instance.animatorManager.SetParameter(name, value);
     }
 
 
