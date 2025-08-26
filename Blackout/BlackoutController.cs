@@ -415,7 +415,7 @@ public class BlackoutController : MonoBehaviour
         if (!DropFPSOnSleep) return;
 
         //store target FPS to restore, i check each time just in case it changed
-        targetFPS = MetaPort.Instance.settings.GetSettingInt("GraphicsFramerateTarget", 0);
+        targetFPS = MetaPort.Instance.settings.GetSettingsInt("GraphicsFramerateTarget", 0);
 
         Application.targetFrameRate = (CurrentState == BlackoutState.Sleeping) ? 5 : targetFPS;
     }
@@ -499,14 +499,14 @@ public class BlackoutController : MonoBehaviour
 
     private void FindScale()
     {
-        if ((!PlayerSetup.Instance._avatar.GetComponent<Animator>()?.avatar?.isHuman ?? true) || PlayerSetup.Instance._avatar.GetComponent<Animator>().GetBoneTransform(HumanBodyBones.Head) == null)
+        if ((!PlayerSetup.Instance.AvatarObject.GetComponent<Animator>()?.avatar?.isHuman ?? true) || PlayerSetup.Instance.AvatarObject.GetComponent<Animator>().GetBoneTransform(HumanBodyBones.Head) == null)
         {
             Blackout.Logger.Msg("Animator is null, or is not Humanoid, defaulting to 1f for scale");
             avatarScale = 1f;
             return;
         }
 
-        Animator anim = PlayerSetup.Instance._avatar.GetComponent<Animator>();
+        Animator anim = PlayerSetup.Instance.AvatarObject.GetComponent<Animator>();
         if (scaleDistance)
         {
             try
@@ -558,7 +558,7 @@ public class BlackoutController : MonoBehaviour
     private void SetParam(string name, float value)
     {
         MelonLogger.Msg($"Setting {name} to {value}");
-        PlayerSetup.Instance.animatorManager.SetParameter(name, value);
+        PlayerSetup.Instance.AnimatorManager.SetParameter(name, value);
     }
 
 

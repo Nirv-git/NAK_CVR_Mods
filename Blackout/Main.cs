@@ -208,6 +208,22 @@ public class Blackout : MelonMod
             }
             catch (Exception e) { Blackout.Logger.Error(e); }
         });
+
+        CVRGameEventSystem.VRModeSwitch.OnPostSwitch.AddListener((a) =>
+        {
+            try
+            {
+                if (Blackout.inVR != MetaPort.Instance.isUsingVr)
+                {
+                    Blackout.Logger.Msg("VRMode change detected! Reinitializing Blackout Instance...");
+                    Blackout.inVR = MetaPort.Instance.isUsingVr;
+                    BlackoutController.Instance.SetupBlackoutInstance();
+                    BlackoutController.Instance.ChangeBlackoutState(BlackoutController.BlackoutState.Awake);
+                }
+            }
+            catch (Exception e) { Blackout.Logger.Error(e); }
+        });
+   
     }
 
     private void OnEnabled()
