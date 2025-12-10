@@ -188,7 +188,7 @@ public class Blackout : MelonMod
         else if (resetVolOnLaunch.Value)
         { //Set to default after game launch
             MetaPort.Instance.settings.SetSettingsInt("AudioMaster", (int)masterVolNormal.Value);
-            ViewManager.Instance.OnSingleSettingUpdated("AudioMaster", masterVolNormal.Value.ToString());
+            ViewManager.OnSingleSettingUpdated("AudioMaster", masterVolNormal.Value.ToString());
         }
 
         CVRGameEventSystem.QuickMenu.OnOpen.AddListener(() =>

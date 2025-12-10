@@ -18,7 +18,7 @@ using System.Reflection;
     downloadLink: "https://github.com/NotAKidOnSteam/NAK_CVR_Mods/tree/main/Blackout"
 )]
 
-[assembly: MelonGame("Alpha Blend Interactive", "ChilloutVR")]
+[assembly: MelonGame(null, "ChilloutVR")]
 [assembly: MelonPlatform(MelonPlatformAttribute.CompatiblePlatforms.WINDOWS_X64)]
 [assembly: MelonPlatformDomain(MelonPlatformDomainAttribute.CompatibleDomains.MONO)]
 [assembly: MelonOptionalDependencies("UIExpansionKit", "BTKUILib")]
@@ -26,6 +26,6 @@ using System.Reflection;
 namespace NAK.Blackout.Properties;
 internal static class AssemblyInfoParams
 {
-    public const string Version = "2.1.4";
+    public const string Version = "2.1.7";
     public const string Author = "Nirvash, NotAKidoS";
 }

@@ -544,12 +544,12 @@ public class BlackoutController : MonoBehaviour
         {
             float newValue = Mathf.Lerp(starting, value, (Time.time - startime) / (endTime - startime));
             MetaPort.Instance.settings.SetSettingsInt("AudioMaster", (int)newValue);
-            ViewManager.Instance.OnSingleSettingUpdated("AudioMaster", newValue.ToString());
+            ViewManager.OnSingleSettingUpdated("AudioMaster", newValue.ToString());
             Blackout.Logger.Msg($"AudioMaster:{newValue:F2}");
             yield return new WaitForSeconds(.5f);
         }
         MetaPort.Instance.settings.SetSettingsInt("AudioMaster", (int)value);
-        ViewManager.Instance.OnSingleSettingUpdated("AudioMaster", value.ToString());
+        ViewManager.OnSingleSettingUpdated("AudioMaster", value.ToString());
         Blackout.Logger.Msg($"AudioMaster-Final:{value:F2} | Readback {MetaPort.Instance.settings.GetSettingsFloat("AudioMaster")}");
         CohtmlHud.Instance.ViewDropTextImmediate("Blackout", "Master Audio Changed", $"Master Audio Set to {(int)value}");
 
@@ -562,33 +562,33 @@ public class BlackoutController : MonoBehaviour
     }
 
 
-//    public void DebugToggle(bool state)
-//    {
-//        if (debugRoutine != null)
-//        {
-//            MelonLoader.MelonCoroutines.Stop(debugRoutine);
-//            BTKUIAddon.debug.CategoryName = $"";
-//            BTKUIAddon.debug2.CategoryName = $"";
-//            BTKUIAddon.debug3.CategoryName = $"";
-//            BTKUIAddon.debug4.CategoryName = $"";
-//            BTKUIAddon.debug5.CategoryName = $"";
-//            BTKUIAddon.debug6.CategoryName = $"";
-//        }
-//        if (state)
-//            debugRoutine = MelonLoader.MelonCoroutines.Start(DebugText());
-//    }
+    //public void DebugToggle(bool state)
+    //{
+    //    if (debugRoutine != null)
+    //    {
+    //        MelonLoader.MelonCoroutines.Stop(debugRoutine);
+    //        BTKUIAddon.debug.CategoryName = $"";
+    //        BTKUIAddon.debug2.CategoryName = $"";
+    //        BTKUIAddon.debug3.CategoryName = $"";
+    //        BTKUIAddon.debug4.CategoryName = $"";
+    //        BTKUIAddon.debug5.CategoryName = $"";
+    //        BTKUIAddon.debug6.CategoryName = $"";
+    //    }
+    //    if (state)
+    //        debugRoutine = MelonLoader.MelonCoroutines.Start(DebugText());
+    //}
 
-//    private IEnumerator DebugText()
-//    {
-//        while (true)
-//        {
-//            BTKUIAddon.debug.CategoryName = $"Curtime:{curTime:F2} LastAwake:{lastAwakeTime:F2} wakeTill:{wakeTill:F2} waitDelayStates:{waitDelayStates:F2}";
-//            BTKUIAddon.debug2.CategoryName = $"drowsyMagnitude:{visionMagnitude}"; 
-//            BTKUIAddon.debug3.CategoryName = $"HeadLocalVel:{headLocalVelocity.magnitude:F2} HeadVel:{headVelocity.magnitude:F2} controllerVelocity:{controllerVelocity.magnitude:F2}";
-//            BTKUIAddon.debug4.CategoryName = $"DrowsyDeadband:{waitToDrowsyDeadband:F2} waitToDrowsy{waitToDrowsy:F2} | AwakeDeadband:{waitToAwakeDeadband:F2} waitToAwake{waitToAwake:F2}";
-//            BTKUIAddon.debug5.CategoryName = $"joystick:{joystickActive} | look.x{CVRInputManager.Instance.lookVector.x:F2} | float:{CVRInputManager.Instance.floatDirection:F2} | move.x:{CVRInputManager.Instance.movementVector.x:F2} | move.y:{CVRInputManager.Instance.movementVector.y:F2} | move.z:{CVRInputManager.Instance.movementVector.z:F2}";
-//            BTKUIAddon.debug6.CategoryName = $"";
-//            yield return new WaitForSeconds(.2f);
-//        }
-//    }
+    //private IEnumerator DebugText()
+    //{
+    //    while (true)
+    //    {
+    //        BTKUIAddon.debug.CategoryName = $"Curtime:{curTime:F2} LastAwake:{lastAwakeTime:F2} wakeTill:{wakeTill:F2} waitDelayStates:{waitDelayStates:F2}";
+    //        BTKUIAddon.debug2.CategoryName = $"drowsyMagnitude:{visionMagnitude}";
+    //        BTKUIAddon.debug3.CategoryName = $"HeadLocalVel:{headLocalVelocity.magnitude:F2} HeadVel:{headVelocity.magnitude:F2} controllerVelocity:{controllerVelocity.magnitude:F2}";
+    //        BTKUIAddon.debug4.CategoryName = $"DrowsyDeadband:{waitToDrowsyDeadband:F2} waitToDrowsy{waitToDrowsy:F2} | AwakeDeadband:{waitToAwakeDeadband:F2} waitToAwake{waitToAwake:F2}";
+    //        BTKUIAddon.debug5.CategoryName = $"joystick:{joystickActive} | look.x{CVRInputManager.Instance.lookVector.x:F2} | float:{CVRInputManager.Instance.floatDirection:F2} | move.x:{CVRInputManager.Instance.movementVector.x:F2} | move.y:{CVRInputManager.Instance.movementVector.y:F2} | move.z:{CVRInputManager.Instance.movementVector.z:F2}";
+    //        BTKUIAddon.debug6.CategoryName = $"";
+    //        yield return new WaitForSeconds(.2f);
+    //    }
+    //}
 }
