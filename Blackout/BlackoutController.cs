@@ -366,7 +366,7 @@ public class BlackoutController : MonoBehaviour
 
     public void SetupBlackoutInstance()
     {
-        activeModeCam = PlayerSetup.Instance.GetActiveCamera().GetComponent<Camera>();
+        activeModeCam = PlayerSetup.Instance.activeCam;
         blackoutAnimator.transform.parent = activeModeCam.transform;
         blackoutAnimator.transform.localPosition = Vector3.zero;
         blackoutAnimator.transform.localRotation = Quaternion.identity;

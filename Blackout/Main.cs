@@ -157,12 +157,7 @@ public class Blackout : MelonMod
             UIExpansionKitAddon.Init();
         }
 
-        //BTKUILib addon
-        if (MelonMod.RegisteredMelons.Any(it => it.Info.Name == "BTKUILib"))
-        {
-            Logger.Msg("Initializing BTKUILib support.");
-            BTKUIAddon.Init();
-        }
+        
 
         MelonLoader.MelonCoroutines.Start(WaitForLocalPlayer());
     }
@@ -173,6 +168,11 @@ public class Blackout : MelonMod
 
         while (PlayerSetup.Instance == null)
             yield return null;
+
+        
+        Logger.Msg("Initializing UILib support.");
+
+        BTKUIAddon.Init();
 
         inVR = MetaPort.Instance.isUsingVr;
         PlayerSetup.Instance.gameObject.AddComponent<BlackoutController>();
